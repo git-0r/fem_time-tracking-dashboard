@@ -10,7 +10,7 @@ let data;
         })
 }
 
-let timeframe = "daily"
+let timeframe = "weekly"
 
 function showData(result) {
 
