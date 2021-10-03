@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+
+:root{
+/* Primary */
+
+--Blue: hsl(246, 80%, 60%);
+--Light-red-work: hsl(15, 100%, 70%);
+--Soft-blue-play: hsl(195, 74%, 62%);
+--Light-red-study: hsl(348, 100%, 68%);
+--Lime-green-exercise: hsl(145, 58%, 55%);
+--Violet-social: hsl(264, 64%, 52%);
+--Soft-orange-selfcare: hsl(43, 84%, 65%);
+
+/* Neutral */
+
+--Very-dark-blue: hsl(226, 43%, 10%);
+--Dark-blue: hsl(235, 46%, 20%);
+--Desaturated-blue: hsl(235, 45%, 61%);
+--Pale-Blue: hsl(236, 100%, 87%);
+
+}
+
+p {
+    margin: 0.5rem 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    color: white;
+    background-color: var(--Very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+}
+
+main{
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;    
+}
+
+.card{
+    width: 250px;
+    height: fit-content;
+    font-size: 18px;
+    border-radius: 15px;
+    padding-top: 46px;
+    margin: auto;
+    grid-column: span 1;
+    background-repeat: no-repeat;
+    background-position: top -10px right 25px;
+}
+
+.Work {
+    background-color: var(--Light-red-work);
+    background-image: url('./images/icon-work.svg');
+    
+}
+
+.Play {
+    background-color: var(--Soft-blue-play);
+    background-image: url('./images/icon-play.svg');
+}
+
+.Study {
+    background-color: var(--Light-red-study);
+    background-image: url('./images/icon-study.svg');
+}
+
+.Exercise {
+    background-color: var(--Lime-green-exercise);
+    background-image: url('./images/icon-exercise.svg');
+}
+
+.Social {
+    background-color: var(--Violet-social);
+    background-image: url('./images/icon-social.svg');
+}
+
+.Self  {
+    background-color: var(--Soft-orange-selfcare);
+    background-image: url('./images/icon-self-care.svg');
+}
+
+.current-time {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.time-container{
+    background-color: var(--Dark-blue);
+    padding: 10%;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.time-container:hover{
+    background-color: hsl(235, 46%, 32%);
+}
+
+.card-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-icon{
+    display: block;
+}
+
+.profile-card{
+    text-align: center;
+    grid-row: span 2;
+    background-color: var(--Dark-blue);
+    border-radius: 18px;
+
+}
+.profile-card .top{
+    background-color: var(--Blue);
+    border-radius: 18px;
+    text-align: left;
+    padding: 10%;
+
+}
+
+.profile-card .bottom{
+    text-align: left;
+    padding: 5% 10%;
+}
+
+.timeframe{
+    margin:  1rem 0;
+    cursor: pointer;
+    color: var(--Pale-Blue);
+    font-weight: 500;
+}
+
+.timeframe:hover {
+    color: white;
+}
+
+.profile-image{
+    width: 80px;
+    height: auto;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+
+}
+
+.profile-image img{
+    display: block;
+    width: 100%;
+}
+
+.name{
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 20%;
+}
+
+.lastWeek-time{
+    color: var(--Desaturated-blue);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.report{
+    color: var(--Pale-Blue);
+}
+
+.active{
+    color: white;
+}
+
+@media (max-width:768px) {
+    body{height: auto;}
+    main{
+
+        grid-template-columns: 1fr;
+        height: 100%;
+        margin: 5rem 0;
+
+    }
+    .card {
+        width: 85vw;
+    }
+
+    .time{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .time-container{
+        padding: 5% 10%;
+    }
+    .profile-card{
+        grid-row: span 1;
+    }
+
+    .profile-card .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5% 10% 0 10%;
+    }
+    .profile-card .bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .profile-image{
+        height: fit-content;
+    }
+
+    .name{
+        font-size: 1.5rem;
+    }
+
+    .timeframe,
+    .lastWeek-time {
+        font-size: 1.2rem
+    }
+}
